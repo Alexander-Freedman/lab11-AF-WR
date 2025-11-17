@@ -11,12 +11,12 @@ class TestCalculator(unittest.TestCase):
     ######### Partner 2
     def test_add(self):
         self.assertEqual(calculator.add(3, 4), 7)
-        self.assertEqual(calculator.add(4, 9), 3)
+        self.assertEqual(calculator.add(4, 9), 13)
         self.assertEqual(calculator.add(0, 0), 0)
 
     def test_subtract(self): # 3 assertions
         self.assertEqual(calculator.sub(10, 3), 7)
-        self.assertEqual(calculator.add(4, 9), -5)
+        self.assertEqual(calculator.add(4, -9), -5)
         self.assertEqual(calculator.add(0, 0), 0)
     # ##########################
 
@@ -27,7 +27,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.multiply(7, 0), 0) # test 0
 
     def test_divide(self): # 3 assertions
-        self.assertEqual(calculator.multiply(10, 2), 5)  # test pos
+        self.assertEqual(calculator.div(10, 2), 5)  # test pos
         self.assertAlmostEqual(calculator.div(5, 2), 2.5) # test float
         with self.assertRaises(ZeroDivisionError): # test error catching
             calculator.div(10, 0)
