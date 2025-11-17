@@ -1,16 +1,17 @@
 import unittest
-import pytest
 import math
-import calculator
+from calculator import
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
     def test_add(self):
-        assert calculator.add(3, 4) == 7
-        assert calculator.add(-2, 5) == 3
+        self.assertEqual(add(3, 4), 7)
+        self.assertEqual(add(4, 9), 3)
+        self.assertEqual(add(0, 0), 0)
 
     def test_subtract(self): # 3 assertions
-        assert calculator.sub(10, 3) == 7
-        assert calculator.sub(4, 9) == -5
+        self.assertEqual(sub(10, 3), 7)
+        self.assertEqual(add(4, 9), -5)
+        self.assertEqual(add(0, 0), 0)
     # ##########################
 
     ######## Partner 1
@@ -28,18 +29,22 @@ def test_divide(self): # 3 assertions
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
-        with pytest.raises(ZeroDivisionError):
-            calculator.div(5, 0)
+        with self.assertRaises(ZeroDivisionError):
+            div(5, 0)
 
     def test_logarithm(self): # 3 assertions
-        assert calculator.log(2, 8) == 3
-        assert math.isclose(calculator.log(10, 100), 2)
+        self.assertEqual(log(2, 8), 3)
+        self.assertTrue(math.isclose(log(10, 100), 2))
+        self.assertTrue(math.isclose(log(3, 9), 2))
+
 
     def test_log_invalid_base(self):
-        with pytest.raises(ValueError):
-            calculator.log(-2, 8)
-        with pytest.raises(ValueError):
-            calculator.log(2, -8)
+        with self.assertRaises(ValueError):
+            log(-2, 8)
+        with self.assertRaises(ValueError):
+            log(2, -8)
+        with self.assertRaises(ValueError):
+            log(0, 5)
     
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
