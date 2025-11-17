@@ -1,3 +1,9 @@
+# https://github.com/Alexander-Freedman/lab11-AF-WR
+# Partner 1 Alexander Freedman
+# Partner 2 William Ross
+
+
+
 import unittest
 import math
 from calculator import
@@ -20,7 +26,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(multiply(-2, 10), -20)  # test neg
         self.assertEqual(multiply(7, 0), 0) # test 0
 
-def test_divide(self): # 3 assertions
+    def test_divide(self): # 3 assertions
         self.assertEqual(multiply(10, 2), 5)  # test pos
         self.assertAlmostEqual(divide(5, 2), 2.5) # test float
         with self.assertRaises(ZeroDivisionError): # test error catching
