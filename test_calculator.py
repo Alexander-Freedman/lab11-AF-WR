@@ -1,3 +1,9 @@
+# https://github.com/Alexander-Freedman/lab11-AF-WR
+# Partner 1 Alexander Freedman
+# Partner 2 William Ross
+
+
+
 import unittest
 import pytest
 import math
