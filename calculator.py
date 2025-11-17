@@ -1,3 +1,7 @@
+# https://github.com/Alexander-Freedman/lab11-AF-WR
+# Partner 1 Alexander Freedman
+# Partner 2 William Ross
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
